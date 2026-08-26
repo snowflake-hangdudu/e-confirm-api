@@ -12,7 +12,7 @@ const DEMO = [
   {
     id: 'demo-001',
     confirmedAt: daysAgo(0, 8, 12),
-    department: '骨科',
+    department: '骨科一病区',
     admissionNo: 'ZY20260825001',
     firstPickCorrect: true,
     confirmerName: '李家属',
@@ -24,11 +24,11 @@ const DEMO = [
   {
     id: 'demo-002',
     confirmedAt: daysAgo(0, 9, 40),
-    department: '普外科',
+    department: '普外科一病区',
     admissionNo: 'ZY20260825002',
     firstPickCorrect: false,
     confirmerName: '王患者',
-    siteLabels: ['右腹股沟'],
+    siteLabels: ['右下腹'],
     role: 'patient',
     nurseName: '访视护士',
     patientName: '王患者',
@@ -36,7 +36,7 @@ const DEMO = [
   {
     id: 'demo-003',
     confirmedAt: daysAgo(1, 10, 18),
-    department: '骨科',
+    department: '骨科一病区',
     admissionNo: 'ZY20260824011',
     firstPickCorrect: true,
     confirmerName: '刘家属',

@@ -3,6 +3,7 @@ import express from 'express'
 import cors from 'cors'
 import { initDb } from './db.js'
 import { authMiddleware, signToken, verifyLogin } from './auth.js'
+import { BODY_PARTS, DEPARTMENTS } from './catalog.js'
 import {
   dashboardStats,
   deleteRecord,
@@ -52,6 +53,14 @@ app.get('/api/dashboard', authMiddleware, async (_req, res) => {
     console.error(err)
     res.status(500).json({ message: '统计失败' })
   }
+})
+
+app.get('/api/catalog/body-parts', authMiddleware, (_req, res) => {
+  res.json(BODY_PARTS)
+})
+
+app.get('/api/catalog/departments', authMiddleware, (_req, res) => {
+  res.json(DEPARTMENTS)
 })
 
 app.get('/api/records/departments', authMiddleware, async (_req, res) => {

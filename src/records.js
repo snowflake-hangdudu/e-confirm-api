@@ -1,3 +1,4 @@
+import { DEPARTMENTS } from './catalog.js'
 import { mapRow, pool } from './db.js'
 
 function asArray(value) {
@@ -119,7 +120,7 @@ export async function listDepartments() {
     WHERE department <> ''
     ORDER BY department
   `)
-  return rows.map((r) => r.department)
+  return [...new Set([...DEPARTMENTS, ...rows.map((r) => r.department)])]
 }
 
 export async function replaceRecord(r) {
