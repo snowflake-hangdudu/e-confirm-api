@@ -66,11 +66,11 @@ export async function upsertRecords(records) {
           r.admissionNo,
           r.firstPickCorrect,
           r.confirmerName,
-          JSON.stringify(r.siteLabels),
+          JSON.stringify(r.siteLabels || []),
           r.role,
           r.nurseName,
           r.patientName,
-          r.signatureImage,
+          r.signatureImage || '',
         ],
       )
     }
@@ -148,11 +148,11 @@ export async function replaceRecord(r) {
       r.admissionNo,
       r.firstPickCorrect,
       r.confirmerName,
-      JSON.stringify(r.siteLabels),
+      JSON.stringify(r.siteLabels || []),
       r.role,
       r.nurseName,
       r.patientName,
-      r.signatureImage,
+      r.signatureImage || '',
     ],
   )
 }

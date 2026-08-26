@@ -159,7 +159,11 @@ app.delete('/api/records/:id', authMiddleware, async (req, res) => {
 
 async function main() {
   await initDb()
-  await seedIfEmpty()
+  try {
+    await seedIfEmpty()
+  } catch (err) {
+    console.error('seed failed', err)
+  }
   app.listen(port, '127.0.0.1', () => {
     console.log(`e-confirm-api listening on 127.0.0.1:${port}`)
   })

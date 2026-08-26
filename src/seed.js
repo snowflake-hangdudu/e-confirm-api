@@ -20,6 +20,7 @@ const DEMO = [
     role: 'family',
     nurseName: '访视护士',
     patientName: '张三',
+    signatureImage: '',
   },
   {
     id: 'demo-002',
@@ -32,6 +33,7 @@ const DEMO = [
     role: 'patient',
     nurseName: '访视护士',
     patientName: '王患者',
+    signatureImage: '',
   },
   {
     id: 'demo-003',
@@ -44,6 +46,7 @@ const DEMO = [
     role: 'family',
     nurseName: '访视护士',
     patientName: '刘七',
+    signatureImage: '',
   },
 ]
 
